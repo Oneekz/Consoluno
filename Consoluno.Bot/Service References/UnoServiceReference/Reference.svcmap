@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7241b784-14b8-4239-ad4f-965c2444866a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1ce89d0e-db1f-4891-a9c6-7bfc2f8d319b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="76f3920d-da9c-4439-aacc-46db87f6ab08" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7d6affd9-9f4b-4be7-b5ab-a0758bcf9fef" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" />
+    <MetadataFile FileName="Consoluno.Common.xsd" MetadataType="Schema" ID="ad43f6e9-7cae-4b0a-b5a6-60a9b9006861" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" />
+    <MetadataFile FileName="Consoluno.Service.xsd" MetadataType="Schema" ID="a9674329-1d0d-463e-bf0a-e5cc0382cda2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UnoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Consoluno.Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUnoService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GetRegisteredUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisteredUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GetRegisteredUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisteredUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_StartGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartGame" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_StartGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GetCommandsToDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandsToDo" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GetCommandsToDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandsToDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_ViewMyCards_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewMyCards" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_ViewMyCards_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewMyCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_TakeCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:TakeCard" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_TakeCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TakeCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_PutCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutCard" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_PutCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GameIsRunning_InputMessage">
+    <wsdl:part name="parameters" element="tns:GameIsRunning" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_GameIsRunning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GameIsRunningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_CheckTokenValidness_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTokenValidness" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_CheckTokenValidness_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckTokenValidnessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_WriteMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteMessage" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_WriteMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_VoteForStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:VoteForStart" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_VoteForStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VoteForStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_SayUnoForMyself_InputMessage">
+    <wsdl:part name="parameters" element="tns:SayUnoForMyself" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_SayUnoForMyself_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SayUnoForMyselfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_SayUno_InputMessage">
+    <wsdl:part name="parameters" element="tns:SayUno" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_SayUno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SayUnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_AddBot_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBot" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_AddBot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_ShuffleUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShuffleUser" />
+  </wsdl:message>
+  <wsdl:message name="IUnoService_ShuffleUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShuffleUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUnoService">
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/RegisterUser" message="tns:IUnoService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/RegisterUserResponse" message="tns:IUnoService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/GetRegisteredUsers" message="tns:IUnoService_GetRegisteredUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/GetRegisteredUsersResponse" message="tns:IUnoService_GetRegisteredUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/StartGame" message="tns:IUnoService_StartGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/StartGameResponse" message="tns:IUnoService_StartGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandsToDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/GetCommandsToDo" message="tns:IUnoService_GetCommandsToDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/GetCommandsToDoResponse" message="tns:IUnoService_GetCommandsToDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewMyCards">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/ViewMyCards" message="tns:IUnoService_ViewMyCards_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/ViewMyCardsResponse" message="tns:IUnoService_ViewMyCards_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TakeCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/TakeCard" message="tns:IUnoService_TakeCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/TakeCardResponse" message="tns:IUnoService_TakeCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/PutCard" message="tns:IUnoService_PutCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/PutCardResponse" message="tns:IUnoService_PutCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameIsRunning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/GameIsRunning" message="tns:IUnoService_GameIsRunning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/GameIsRunningResponse" message="tns:IUnoService_GameIsRunning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTokenValidness">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/CheckTokenValidness" message="tns:IUnoService_CheckTokenValidness_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/CheckTokenValidnessResponse" message="tns:IUnoService_CheckTokenValidness_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/WriteMessage" message="tns:IUnoService_WriteMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/WriteMessageResponse" message="tns:IUnoService_WriteMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/VoteForStart" message="tns:IUnoService_VoteForStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/VoteForStartResponse" message="tns:IUnoService_VoteForStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SayUnoForMyself">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/SayUnoForMyself" message="tns:IUnoService_SayUnoForMyself_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/SayUnoForMyselfResponse" message="tns:IUnoService_SayUnoForMyself_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SayUno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/SayUno" message="tns:IUnoService_SayUno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/SayUnoResponse" message="tns:IUnoService_SayUno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/AddBot" message="tns:IUnoService_AddBot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/AddBotResponse" message="tns:IUnoService_AddBot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShuffleUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUnoService/ShuffleUser" message="tns:IUnoService_ShuffleUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUnoService/ShuffleUserResponse" message="tns:IUnoService_ShuffleUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUnoService" type="tns:IUnoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredUsers">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/GetRegisteredUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartGame">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/StartGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandsToDo">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/GetCommandsToDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewMyCards">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/ViewMyCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TakeCard">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/TakeCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutCard">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/PutCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GameIsRunning">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/GameIsRunning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTokenValidness">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/CheckTokenValidness" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteMessage">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/WriteMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoteForStart">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/VoteForStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SayUnoForMyself">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/SayUnoForMyself" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SayUno">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/SayUno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBot">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/AddBot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShuffleUser">
+      <soap:operation soapAction="http://tempuri.org/IUnoService/ShuffleUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UnoService">
+    <wsdl:port name="BasicHttpBinding_IUnoService" binding="tns:BasicHttpBinding_IUnoService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Consoluno.Service/UnoService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

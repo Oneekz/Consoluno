@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Consoluno.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ServiceAnswerOfguid">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceAnswerOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="guid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceAnswerOfguid" nillable="true" type="tns:ServiceAnswerOfguid" />
+  <xs:complexType name="ArrayOfPairOfbooleanstringint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PairOfbooleanstringint" nillable="true" type="tns:PairOfbooleanstringint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPairOfbooleanstringint" nillable="true" type="tns:ArrayOfPairOfbooleanstringint" />
+  <xs:complexType name="PairOfbooleanstringint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PairOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Item1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Item2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item3" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PairOfbooleanstringint" nillable="true" type="tns:PairOfbooleanstringint" />
+  <xs:complexType name="ServiceAnswerOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceAnswerOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceAnswerOfboolean" nillable="true" type="tns:ServiceAnswerOfboolean" />
+  <xs:complexType name="ServiceAnswerOfArrayOfNewsItemwLHRvNuq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceAnswerOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfNewsItem" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="tns:ArrayOfNewsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceAnswerOfArrayOfNewsItemwLHRvNuq" nillable="true" type="tns:ServiceAnswerOfArrayOfNewsItemwLHRvNuq" />
+  <xs:complexType name="ArrayOfNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsItem" nillable="true" type="tns:NewsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNewsItem" nillable="true" type="tns:ArrayOfNewsItem" />
+  <xs:complexType name="NewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Card" nillable="true" type="tns:Card" />
+      <xs:element minOccurs="0" name="Command" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCommand" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewsItem" nillable="true" type="tns:NewsItem" />
+  <xs:complexType name="Card">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" type="tns:CardColor" />
+      <xs:element minOccurs="0" name="Type" type="tns:CardType" />
+      <xs:element minOccurs="0" name="ZeroCardUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Card" nillable="true" type="tns:Card" />
+  <xs:simpleType name="CardColor">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Blue" />
+      <xs:enumeration value="Red" />
+      <xs:enumeration value="Green" />
+      <xs:enumeration value="Yellow" />
+      <xs:enumeration value="White" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CardColor" nillable="true" type="tns:CardColor" />
+  <xs:simpleType name="CardType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Number0" />
+      <xs:enumeration value="Number1" />
+      <xs:enumeration value="Number2" />
+      <xs:enumeration value="Number3" />
+      <xs:enumeration value="Number4" />
+      <xs:enumeration value="Number5" />
+      <xs:enumeration value="Number6" />
+      <xs:enumeration value="Number7" />
+      <xs:enumeration value="Number8" />
+      <xs:enumeration value="Number9" />
+      <xs:enumeration value="Reverse" />
+      <xs:enumeration value="Skip" />
+      <xs:enumeration value="Draw2" />
+      <xs:enumeration value="Draw4" />
+      <xs:enumeration value="Wild" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CardType" nillable="true" type="tns:CardType" />
+  <xs:complexType name="ServiceAnswerOfArrayOfCardwLHRvNuq">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceAnswerOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCard" Namespace="http://schemas.datacontract.org/2004/07/Consoluno.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="tns:ArrayOfCard" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceAnswerOfArrayOfCardwLHRvNuq" nillable="true" type="tns:ServiceAnswerOfArrayOfCardwLHRvNuq" />
+  <xs:complexType name="ArrayOfCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Card" nillable="true" type="tns:Card" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCard" nillable="true" type="tns:ArrayOfCard" />
+</xs:schema>

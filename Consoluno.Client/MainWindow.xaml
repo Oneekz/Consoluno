@@ -1,0 +1,63 @@
+﻿<Window x:Class="Consoluno.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:helpers="clr-namespace:Consoluno.Client.Helpers"
+        Title="{Binding WindowTitle}" MinHeight="340" MaxWidth="676" Height="340" Width="676" Background="Black" DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <DockPanel>
+        <ItemsControl ItemsSource="{Binding UserList}" DockPanel.Dock="Bottom">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding SayUnoCommand}" Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <TextBlock Foreground="{Binding Color}" Text="{Binding DisplayName}" Margin="2"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl ItemsSource="{Binding CurrentCards}" DockPanel.Dock="Bottom">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Foreground="{Binding DisplayColor}" Text="{Binding DisplayText}" Margin="2"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <TextBox DockPanel.Dock="Bottom" Text="{Binding CommandString, UpdateSourceTrigger=PropertyChanged}" Background="{Binding InputLineBackground}" Foreground="White" BorderThickness="0">
+            <TextBox.InputBindings>
+                <KeyBinding Key="Return" Command="{Binding PushCommand}"/>
+                <KeyBinding Key="Up" Command="{Binding LastCommadCommand}"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" >
+            <i:Interaction.Behaviors>
+                <helpers:AutoScroller AutoScrollTrigger="{Binding OutputData}"  />
+            </i:Interaction.Behaviors>
+            <ItemsControl ItemsSource="{Binding OutputData}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Foreground="{Binding Color}" Text="{Binding Text}" Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+        </ScrollViewer>
+    </DockPanel>
+</Window>
